@@ -3,33 +3,7 @@ import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeItem from '@mui/lab/TreeItem';
-
-const data = {
-  id: 'root',
-  name: 'Sports Club',
-  children: [
-    {
-      id: '1',
-      name: 'football',
-      children: [
-        {
-          id: '4',
-          name: 'Change Deadline',
-        },
-      ]
-    },
-    {
-      id: '3',
-      name: 'Basket Ball',
-      children: [
-        {
-          id: '4',
-          name: 'Change Deadline',
-        },
-      ],
-    },
-  ],
-};
+import {data1,data2,data3} from "../Config/Data.config.js"
 
 export default function RichObjectTreeView() {
   const renderTree = (nodes) => (
@@ -46,9 +20,16 @@ export default function RichObjectTreeView() {
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpanded={['root']}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{ height: 110, flexGrow: 1, maxWidth:400 }}
+      sx={{ height: 100, flexGrow: 1, maxWidth:400,position:'relative'}}
     >
-      {renderTree(data)}
+      {renderTree(data1)}
+      <br/>
+      {renderTree(data2)}
+      <br/>
+      {renderTree(data3)}
+      <br/>
+       
+
     </TreeView>
   );
 }
