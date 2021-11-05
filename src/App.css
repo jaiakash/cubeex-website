@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+* {
+  font-family: "Roboto Mono", monospace !important;
+}
+.Mui-focused{
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(7, 7, 7, 0.5)!important;
+}
+.css-1g86id8-MuiTreeItem-content.Mui-selected{
+    border-radius: 10px;
+  
+}
+.MuiTreeItem-content{
+    height:3em!important ;
+ 
+}
+.MuiTreeItem-content:hover{
+    color: white;
+    border-radius: 10px;
+    background-color:rgba(53, 50, 50, 0.3)!important;
+}
+
+.MuiTreeView-root .css-1kirow-MuiTreeView-root{
+margin-bottom:30px;
+}
