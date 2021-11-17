@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom"
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 const style = {
@@ -12,14 +13,16 @@ const style = {
   textTransform: "capitalize"
 };
 const Mail = (props) => {
+    const handleClick=()=>{
+        props.history.push(`/mail/${props.item.id}`);
+      }
   return (
-    <Box sx={style} >
+    <Box sx={style} onClick={handleClick} >
       <Grid container columns={16} spacing={1}>
         <Grid
           item
           xs={2}
           sx={{
-           
             height: "7em",
             display: "grid",
             placeContent: "center",
@@ -60,4 +63,4 @@ const Mail = (props) => {
   );
 };
 
-export default Mail;
+export default withRouter(Mail);

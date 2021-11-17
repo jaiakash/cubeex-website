@@ -78,3 +78,9 @@ margin-bottom:30px;
   border: solid white 10px;
   border-radius: 50%;
 }
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

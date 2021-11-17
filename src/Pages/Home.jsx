@@ -1,10 +1,12 @@
 import React from "react";
+import {withRouter} from "react-router-dom"
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Tree from "../components/TreeView";
 import Auth from "../components/Auth";
 import User from "./User";
-const Home = () => {
+import MailDescription from "../components/MailDescription";
+const Home = (props) => {
   return (
     <Grid container spacing={0} columns={16}>
       <Grid
@@ -29,9 +31,12 @@ const Home = () => {
           <Tree />
         </Container>
       </Grid>
-      <User />
+      {
+        props.match.url.includes('mail')?(<MailDescription/>) :(<User />)
+       
+      }
     </Grid>
   );
 };
 
-export default Home;
+export default withRouter(Home);
